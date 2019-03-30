@@ -3,9 +3,10 @@
 *For use with Ardupilot.*
 
 ENVIRONMENT SETUP:
-1. Install pip and python3
-2. Download code das-output.py
-3. For all "import <dependecy>" or "from <dependency> import <...>" at the top of .py file, in command line enter: pip install <dependency>
+1. Install pip and python3 and add to path/environment variables
+2. Install git and git bash
+3. Navigate to directory of choice and clone repo ("git init" then "git clone https://github.com/mwlkhoo/DAS-Aero.git"
+4. For all "import <dependecy>" or "from <dependency> import <...>" at the top of .py file, in command line enter: pip install <dependency>
 
 MISSION PLANNER:
 1. <ctrl + f>
