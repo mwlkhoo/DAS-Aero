@@ -6,7 +6,8 @@ ENVIRONMENT SETUP:
 1. Install pip and python3 and add to path/environment variables
 2. Install git and git bash
 3. Navigate to directory of choice and clone repo ("git init" then "git clone https://github.com/mwlkhoo/DAS-Aero.git"
-4. For all "import <dependecy>" or "from <dependency> import <...>" at the top of .py file, in command line enter: pip install <dependency>
+4. Run "pip install virtualenv"
+5. For all "import <dependecy>" or "from <dependency> import <...>" at the top of .py file, in command line enter: pip install <dependency>
 
 MISSION PLANNER:
 1. <ctrl + f>
