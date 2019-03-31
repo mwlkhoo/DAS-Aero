@@ -26,7 +26,7 @@ CONFIGURE CODE:
 
 RUN CODE: 
 1. Navigate to directory containing file
-2. Enter: python <file>.py
+2. Enter: python das-output.py
 
 Triggering servo release should now. 
 
