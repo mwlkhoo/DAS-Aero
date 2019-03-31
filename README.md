@@ -9,7 +9,8 @@ ENVIRONMENT SETUP:
 4. Run "pip install virtualenv"
 5. Navigate to directory of choice and "git clone https://github.com/mavlink/mavlink.git" then "git submodule update --init --recursive"
 6. For all "import <dependecy>" or "from <dependency> import <...>" at the top of .py file, in command line enter: pip install <dependency> 
-    *EDIT: "pip install pymavlink" should be the only dependency that needs to be installed"*
+
+*EDIT: "pip install pymavlink" should be the only dependency that needs to be installed"*
 
 MISSION PLANNER:
 1. <ctrl + f>
