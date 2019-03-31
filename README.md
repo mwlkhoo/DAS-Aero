@@ -26,7 +26,8 @@ CONFIGURE CODE:
 
 RUN CODE: 
 1. Navigate to directory containing file
-2. Enter: python das-output.py
+2. Enter: "python das-output.py"
+3. To quit program: "ctrl + c"
 
 Triggering servo release should now. 
 
