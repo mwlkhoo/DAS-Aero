@@ -3,14 +3,14 @@
 *For use with Ardupilot.*
 
 ENVIRONMENT SETUP:
-1. Install pip and python3 and add to path/environment variables
+1. Install pip and python3 (version 3.7.2) and add the following paths to environment variables: C:\Users\miche\AppData\Local\Programs\Python\Python37-32 and C:\Users\miche\AppData\Local\Programs\Python\Python37-32\Scripts
 2. Install git and git bash
-3. Navigate to directory of choice and clone repo ("git init" then "git clone https://github.com/mwlkhoo/DAS-Aero.git"
-4. Run "pip install virtualenv"
-5. Navigate to directory of choice and "git clone https://github.com/mavlink/mavlink.git" then "git submodule update --init --recursive"
-6. For all "import <dependecy>" or "from <dependency> import <...>" at the top of .py file, in command line enter: pip install <dependency> 
-
-*EDIT: "pip install pymavlink" should be the only dependency that needs to be installed"*
+3. Navigate to directory of choice and clone repo: "git init" then "git clone https://github.com/mwlkhoo/DAS-Aero.git"
+4. In same directory clone repo "git clone https://github.com/mavlink/mavlink.git"  then "git submodule update --init --recursive"
+5. Enter ./mavlink directory and clone git repo "git clone https://github.com/ardupilot/pymavlink.git"
+5. Run "pip install pymavlink"
+6. Run "python <path-to-mavlink-directory>/mavlink/mavgenerate.py
+7. For XML: <path-to-mavlink-directory>/mavlink/message_definitions/v1.0/standard.xml, for Out: <path-to-mavlink-directory>/mavlink/include"
 
 MISSION PLANNER:
 1. <ctrl + f>
