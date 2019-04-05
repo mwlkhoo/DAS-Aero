@@ -118,9 +118,9 @@ try:
 		# open = smaller than 1500
 		if(CDA1Alt == None):
 			CDA1Servo = servoData.servo5_raw
-			if(CDA1Servo < CDA1Trigger):
+			if(CDA1Servo > CDA1Trigger):
 				CDA1AltMetres = altData
-				CDA1Alt = '%.3f'%(CDA1AltMetres * feetPerMetre)
+				CDA1Alt = '%.0f'%(CDA1AltMetres * feetPerMetre)
 				# CDAOrder = order
 				# CDAString = "<p>CDA1:" + str(CDAAlt) + "ft</p>\n<p>CDA2:" + str(CDAAlt) + "ft</p>\n"
 				CDA1String = "<p>CDA1:" + str(CDA1Alt) + "ft</p>\n"
@@ -137,9 +137,9 @@ try:
 		# open = smaller than 1500
 		if(CDA2Alt == None):
 			CDA2Servo = servoData.servo6_raw
-			if(CDA2Servo < CDA2Trigger):
+			if(CDA2Servo > CDA2Trigger):
 				CDA2AltMetres = altData
-				CDA2Alt = '%.3f'%(CDA2AltMetres * feetPerMetre)
+				CDA2Alt = '%.0f'%(CDA2AltMetres * feetPerMetre)
 				# CDAOrder = order
 				# CDAString = "<p>CDA1:" + str(CDAAlt) + "ft</p>\n<p>CDA2:" + str(CDAAlt) + "ft</p>\n"
 				CDA2String = "<p>CDA2:" + str(CDA2Alt) + "ft</p>\n"
@@ -157,9 +157,9 @@ try:
 		# open = larger than 1300
 		if(waterAlt == None):
 			waterServo = servoData.servo7_raw
-			if(waterServo > waterTrigger):
+			if(waterServo < waterTrigger):
 				waterAltMetres = altData
-				waterAlt = '%.3f'%(waterAltMetres * feetPerMetre)
+				waterAlt = '%.0f'%(waterAltMetres * feetPerMetre)
 				# waterOrder = order
 				waterString = "<p>Water:" + str(waterAlt) + "ft</p>\n"
 				body = waterString + body
@@ -174,9 +174,9 @@ try:
 		# open = larger than 1300
 		if(habitatAlt == None):
 			habitatServo = servoData.servo8_raw
-			if(habitatServo > habitatTrigger):
+			if(habitatServo < habitatTrigger):
 				habitatAltMetres = altData
-				habitatAlt = '%.3f'%(habitatAltMetres * feetPerMetre)
+				habitatAlt = '%.0f'%(habitatAltMetres * feetPerMetre)
 				# habitatOrder = order
 				habitatString = "<p>Habitat:" + str(habitatAlt) + "ft</p>\n"
 				body = habitatString + body
