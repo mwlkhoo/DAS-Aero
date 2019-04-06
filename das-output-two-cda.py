@@ -27,7 +27,9 @@ def servo():
 # VFR_HUD contains altitude param
 def VFR():
 	try:
-		vfrData = the_connection.recv_match(type='VFR_HUD', blocking=True)
+		# vfrData = the_connection.recv_match(type='VFR_HUD', blocking=True)
+		vfrData = the_connection.recv_match(type='TERRAIN_REPORT', blocking=True)
+
 		return vfrData
 	except: 
 		print("Error getting VFR HUD data")
@@ -112,8 +114,11 @@ try:
 		VFRData = VFR()
 
 		# TODO: add while loop for error
-		altData = VFRData.alt
+		# altData = VFRData.alt
+		altData = VFRData.current_height
 
+
+		print(altData)
 		# Top left (ie. usual flight mod channel)
 		# open = smaller than 1500
 		if(CDA1Alt == None):
@@ -156,8 +161,8 @@ try:
 		# Channel D (RCIN6) -> front hatch
 		# open = larger than 1300
 		if(waterAlt == None):
-			waterServo = servoData.servo7_raw
-			if(waterServo < waterTrigger):
+			waterServo = servoData.servo8_raw
+			if(waterServo > waterTrigger):
 				waterAltMetres = altData
 				waterAlt = '%.0f'%(waterAltMetres * feetPerMetre)
 				# waterOrder = order
@@ -173,8 +178,8 @@ try:
 		# Channel E (RCIN7) -> back hatch
 		# open = larger than 1300
 		if(habitatAlt == None):
-			habitatServo = servoData.servo8_raw
-			if(habitatServo < habitatTrigger):
+			habitatServo = servoData.servo7_raw
+			if(habitatServo > habitatTrigger):
 				habitatAltMetres = altData
 				habitatAlt = '%.0f'%(habitatAltMetres * feetPerMetre)
 				# habitatOrder = order
